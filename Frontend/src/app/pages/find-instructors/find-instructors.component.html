@@ -1,0 +1,149 @@
+<div>
+  <form class="max-w-lg mx-auto">
+    <div class="flex">
+      <label
+        for="search-dropdown"
+        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+        >Buscar Instructor</label
+      >
+      <button
+        id="dropdown-button"
+        data-dropdown-toggle="dropdown"
+        class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+        type="button"
+      >
+        Filtro
+        <svg
+          class="w-2.5 h-2.5 ms-2.5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 10 6"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 4 4 4-4"
+          />
+        </svg>
+      </button>
+      <div
+        id="dropdown"
+        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+      >
+        <ul
+          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdown-button"
+        >
+          <li>
+            <button
+              type="button"
+              class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >
+              Nombre
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >
+              Correo
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >
+              Teléfono
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="relative w-full">
+        <input
+          type="email"
+          id="default-search"
+          class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Busca a un instructor por correo"
+          required
+        />
+        <button
+          type="submit"
+          class="flex items-center justify-center gap-2 text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          <svg
+            class="w-4 h-4"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+            />
+          </svg>
+          Buscar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+<br />
+
+<!-- Tabla para mostrar los datos de los instructores -->
+<div class="flex justify-center relative overflow-x-auto rounded-lg px-20">
+  <table
+    class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+  >
+    <thead
+      class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
+    >
+      <tr>
+        <th scope="col" class="px-6 py-3">Instructor</th>
+        <th scope="col" class="px-6 py-3">Correo</th>
+        <th scope="col" class="px-6 py-3">Teléfono</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí se puede iterar dinámicamente para agregar más filas con datos de los instructores -->
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          Juan Pérez
+        </th>
+        <td class="px-6 py-4">juan.perez&#64;email.com</td>
+        <td class="px-6 py-4">+52 55 1234 5678</td>
+      </tr>
+      <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          María López
+        </th>
+        <td class="px-6 py-4">maria.lopez&#64;email.com</td>
+        <td class="px-6 py-4">+52 55 8765 4321</td>
+      </tr>
+      <tr class="bg-white dark:bg-gray-800">
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+        >
+          Carlos García
+        </th>
+        <td class="px-6 py-4">carlos.garcia&#64;email.com</td>
+        <td class="px-6 py-4">+52 55 6789 1234</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,1095 @@
+<div>
+  <app-stepper-indicator></app-stepper-indicator>
+  <br />
+  <div>
+    <div class="flex justify-center">
+      <div
+        class="w-[1000px] bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-full dark:bg-gray-800 dark:border-gray-700 border border-gray-400"
+      >
+        <div>
+          <img
+            src="/img/plecas-sistema/datos-generales.png"
+            alt="Banner"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="xl:p-10">
+          <div>
+            <!-- NOMBRE DEL DIPLOMADO  -->
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+            >
+              Nombre completo del Curso/Diplomado
+            </h1>
+            <input
+              type="text"
+              id="course_name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="El nombre de tu curso/diplomado aquí"
+            />
+          </div>
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+          <!-- TIPO DE SERVICIO -->
+          <h1
+            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+          >
+            Tipo de servicio
+          </h1>
+          <div>
+            <ul
+              class="items-center w-full text-base font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            >
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-curso"
+                    type="radio"
+                    value="curso"
+                    name="list-radio-service"
+                    [(ngModel)]="tipoServicio"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-curso"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Curso</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-taller"
+                    type="radio"
+                    value="taller"
+                    name="list-radio-service"
+                    [(ngModel)]="tipoServicio"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-taller"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Taller</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-seminario"
+                    type="radio"
+                    value="seminario"
+                    name="list-radio-service"
+                    [(ngModel)]="tipoServicio"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-seminario"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Seminario</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-diplomado"
+                    type="radio"
+                    value="diplomado"
+                    name="list-radio-service"
+                    [(ngModel)]="tipoServicio"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-diplomado"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Diplomado</label
+                  >
+                </div>
+              </li>
+
+              <li class="w-full dark:border-gray-600">
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-otro-servicio"
+                    type="radio"
+                    value="otro-servicio"
+                    name="list-radio-service"
+                    [(ngModel)]="tipoServicio"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-otro-servicio"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Otro</label
+                  >
+                  <input
+                    id="otro-servicio"
+                    type="text"
+                    class="ms-2 p-2 rounded-md dark:bg-gray-600 bg-gray-100 border border-gray-300 dark:border-gray-500 focus:outline-none"
+                    placeholder="Especificar"
+                    *ngIf="tipoServicio === 'otro-servicio'"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+
+          <!-- CATEGORÍA -->
+          <h1
+            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+          >
+            Categoría
+          </h1>
+          <div>
+            <form class="w-full">
+              <select
+                id="category"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option value="" disabled selected>
+                  Seleccionar categoría
+                </option>
+                <option value="ingenieria">
+                  Ingeniería y Ciencias Físico Matemáticas
+                </option>
+                <option value="medico-biologicas">
+                  Ciencias Médico Biológicas
+                </option>
+                <option value="sociales-administrativas">
+                  Ciencias Sociales y Administrativas
+                </option>
+                <option value="desarrollo-humano">Desarrollo Humano</option>
+                <option value="idiomas">Idiomas</option>
+                <option value="multidisciplinarios">Multidisciplinarios</option>
+                <option value="educacion">Educación</option>
+                <option value="tics">TICs</option>
+              </select>
+            </form>
+          </div>
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+          <!-- CONVENIO -->
+          <h1
+            class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+          >
+            Convenio (opcional)
+          </h1>
+          <!-- Toggle para activar las opciones de convenio -->
+          <label class="inline-flex items-center cursor-pointer">
+            <input
+              id="toggle-convenio"
+              type="checkbox"
+              [(ngModel)]="tieneConvenio"
+              class="sr-only peer"
+            />
+            <div
+              class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+            ></div>
+            <span
+              class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300"
+              >¿Cuenta con convenio?</span
+            >
+          </label>
+
+          <!-- Opciones de convenio, se muestran solo si tieneConvenio es true -->
+          <div class="mt-4" *ngIf="tieneConvenio">
+            <ul
+              class="items-center w-full text-base font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            >
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-convenio"
+                    type="radio"
+                    value="convenio"
+                    name="list-radio-convenio"
+                    [(ngModel)]="categoriaConvenio"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-convenio"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Convenio</label
+                  >
+                  <input
+                    type="text"
+                    class="ml-2 p-1 rounded-md dark:bg-gray-600 bg-gray-100 border border-gray-300 dark:border-gray-500 text-base focus:outline-none"
+                    placeholder="No. de Convenio"
+                    *ngIf="categoriaConvenio === 'convenio'"
+                  />
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-instituciones"
+                    type="radio"
+                    value="instituciones"
+                    name="list-radio-convenio"
+                    [(ngModel)]="categoriaConvenio"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-instituciones"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Instituciones</label
+                  >
+                  <input
+                    type="text"
+                    class="ml-2 p-1 rounded-md dark:bg-gray-600 bg-gray-100 border border-gray-300 dark:border-gray-500 text-base focus:outline-none"
+                    placeholder="Nombre de la Institución"
+                    *ngIf="categoriaConvenio === 'instituciones'"
+                  />
+                </div>
+              </li>
+              <li class="w-full dark:border-gray-600">
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-otro"
+                    type="radio"
+                    value="otro"
+                    name="list-radio-convenio"
+                    [(ngModel)]="categoriaConvenio"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-otro"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Otro</label
+                  >
+                  <input
+                    type="text"
+                    class="ml-2 p-1 rounded-md dark:bg-gray-600 bg-gray-100 border border-gray-300 dark:border-gray-500 text-base focus:outline-none"
+                    placeholder="Especifica"
+                    *ngIf="categoriaConvenio === 'otro'"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+
+          <div>
+            <!-- NOMBRE DE LA UNIDAD -->
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+            >
+              Unidad responsable del servicio
+            </h1>
+
+            <div class="flex gap-4">
+              <!-- Primer Combobox (Pequeño) -->
+              <select
+                id="unidad-principal"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                (change)="onUnidadChange($event)"
+              >
+                <option selected disabled>Seleccionar tipo de unidad</option>
+                <option value="dvdrs">CVDRs</option>
+                <option value="cittas">CITTAs</option>
+              </select>
+
+              <!-- Segundo Combobox (Grande) -->
+              <select
+                id="unidad-secundaria"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option selected disabled>Seleccionar unidad específica</option>
+              </select>
+            </div>
+          </div>
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+          <!-- MODALIDAD -->
+          <div>
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+            >
+              Modalidad
+            </h1>
+            <ul
+              class="items-center w-full text-base font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            >
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-escolarizada"
+                    type="radio"
+                    value="escolarizada"
+                    name="list-radio-modality"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-escolarizada"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Escolarizada</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-no-escolarizada"
+                    type="radio"
+                    value="no-escolarizada"
+                    name="list-radio-modality"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-no-escolarizada"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >No escolarizada</label
+                  >
+                </div>
+              </li>
+              <li class="w-full dark:border-gray-600">
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-mixta"
+                    type="radio"
+                    value="mixta"
+                    name="list-radio-modality"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-mixta"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Mixta</label
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+          <!-- OFERTA EDUCATIVA -->
+          <div>
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+            >
+              Oferta Educativa
+            </h1>
+            <ul
+              class="items-center w-full text-md font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+            >
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-medio-superior"
+                    type="radio"
+                    value="escolarizada"
+                    name="list-radio-modality"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-escolarizada"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Medio Superior</label
+                  >
+                </div>
+              </li>
+              <li
+                class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+              >
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-superior"
+                    type="radio"
+                    value="no-escolarizada"
+                    name="list-radio-modality"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-no-escolarizada"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Superior</label
+                  >
+                </div>
+              </li>
+              <li class="w-full dark:border-gray-600">
+                <div class="flex items-center ps-3">
+                  <input
+                    id="horizontal-list-radio-posgrado"
+                    type="radio"
+                    value="mixta"
+                    name="list-radio-modality"
+                    class="w-4 h- 4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                  <label
+                    for="horizontal-list-radio-mixta"
+                    class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                    >Posgrado</label
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+          <!-- SEDE -->
+          <div>
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+            >
+              Sede en la que se desarrollará el servicio
+            </h1>
+            <div
+              class="w-full text-base font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white p-4"
+            >
+              <div class="mb-4">
+                <label
+                  for="sede"
+                  class="block mb-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                  >Sede:</label
+                >
+                <input
+                  id="sede"
+                  type="text"
+                  placeholder="Instalaciones"
+                  class="w-full p-2 rounded-md dark:bg-gray-600 bg-gray-100 border border-gray-300 dark:border-gray-500 focus:outline-none"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="plataforma"
+                  class="block mb-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                  >Plataforma educativa:</label
+                >
+                <ul
+                  class="items-center w-full text-base font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                >
+                  <li
+                    class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+                  >
+                    <div class="flex items-center ps-3">
+                      <input
+                        id="checkbox-zoom"
+                        type="checkbox"
+                        value="zoom"
+                        name="checkbox-platform"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                      />
+                      <label
+                        for="checkbox-zoom"
+                        class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Zoom</label
+                      >
+                    </div>
+                  </li>
+                  <li
+                    class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+                  >
+                    <div class="flex items-center ps-3">
+                      <input
+                        id="checkbox-meet"
+                        type="checkbox"
+                        value="meet"
+                        name="checkbox-platform"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                      />
+                      <label
+                        for="checkbox-meet"
+                        class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Meet</label
+                      >
+                    </div>
+                  </li>
+                  <li
+                    class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+                  >
+                    <div class="flex items-center ps-3">
+                      <input
+                        id="checkbox-moodle"
+                        type="checkbox"
+                        value="moodle"
+                        name="checkbox-platform"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                      />
+                      <label
+                        for="checkbox-moodle"
+                        class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Moodle</label
+                      >
+                    </div>
+                  </li>
+                  <li
+                    class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600"
+                  >
+                    <div class="flex items-center ps-3">
+                      <input
+                        id="checkbox-teams"
+                        type="checkbox"
+                        value="teams"
+                        name="checkbox-platform"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                      />
+                      <label
+                        for="checkbox-teams"
+                        class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Teams</label
+                      >
+                    </div>
+                  </li>
+                  <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                      <input
+                        id="checkbox-otro-medio"
+                        type="checkbox"
+                        value="otro-medio"
+                        name="checkbox-platform"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                      />
+                      <label
+                        for="checkbox-otro-medio"
+                        class="w-full py-3 ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Otro:</label
+                      >
+                      <input
+                        id="otro-plataforma"
+                        type="text"
+                        class="ms-2 p-2 rounded-md dark:bg-gray-600 bg-gray-100 border border-gray-300 dark:border-gray-500 focus:outline-none"
+                        placeholder="Especificar"
+                      />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+
+          <div>
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+            >
+              Asignar autores / co-autores / Instructores
+            </h1>
+
+            <div class="flex gap-4 mb-4">
+              <!-- Combobox para Autores / Co-Autores / Instructores -->
+              <select
+                [(ngModel)]="selectedPersona"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              >
+                <option value="" disabled selected>Seleccionar Persona</option>
+                <option *ngFor="let persona of personas" [value]="persona">
+                  {{ persona }}
+                </option>
+              </select>
+
+              <!-- Botón para añadir a la tabla -->
+              <button
+                (click)="addPersona()"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Añadir
+              </button>
+            </div>
+
+            <!-- Tabla para mostrar autores, co-autores e instructores -->
+            <div class="overflow-x-auto">
+              <table
+                class="w-full text-base text-left text-gray-500 dark:text-gray-400"
+              >
+                <thead
+                  class="text-sm text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
+                >
+                  <tr>
+                    <th scope="col" class="px-6 py-3">Nombre</th>
+                    <th scope="col" class="px-6 py-3">Rol</th>
+                    <th scope="col" class="px-6 py-3">Acción</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="let persona of seleccionados; let i = index"
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                  >
+                    <td class="px-6 py-4">{{ persona.nombre }}</td>
+                    <td class="px-6 py-4">
+                      <select
+                        [(ngModel)]="persona.rol"
+                        class="text-sm bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                      >
+                        <option value="Autor">Autor</option>
+                        <option value="Co-Autor">Co-Autor</option>
+                        <option value="Instructor">Instructor</option>
+                      </select>
+                    </td>
+                    <td class="px-6 py-4">
+                      <button
+                        (click)="removePersona(i)"
+                        class="text-red-600 hover:text-red-800 font-bold"
+                      >
+                        Eliminar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Hipervínculo para dar de alta a una nueva persona -->
+            <div class="mt-4">
+              <a
+                routerLink="../instructor-register"
+                class="text-blue-600 hover:text-blue-800 font-medium"
+              >
+                ¿No encuentras a alguien? Dalo de alta aquí
+              </a>
+            </div>
+          </div>
+
+          <hr class="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700" />
+
+          <div class="flex items-center mb-3">
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white"
+            >
+              Generar Cronograma
+            </h1>
+
+            <!-- CRONOGRAMA -->
+            <button
+              data-modal-target="cronograma-modal"
+              data-modal-toggle="cronograma-modal"
+              class="ml-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 flex items-center"
+              type="button"
+            >
+              Cronograma
+              <svg
+                class="w-4 h-4 text-white ml-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            id="cronograma-modal"
+            tabindex="-1"
+            aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          >
+            <div class="relative p-4 w-full max-w-md max-h-full">
+              <div
+                class="relative bg-white rounded-lg shadow dark:bg-gray-700 p-5"
+              >
+                <form [formGroup]="cronograma">
+                  <h1
+                    class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+                  >
+                    ¿Cuánto durará el curso?
+                  </h1>
+
+                  <div
+                    id="date-range-picker"
+                    date-rangepicker
+                    class="flex items-center"
+                  >
+                    <div class="relative">
+                      <div
+                        class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                      >
+                        <svg
+                          class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                          />
+                        </svg>
+                      </div>
+                      <input
+                        id="fechaInicio"
+                        formControlName="fechaInicio"
+                        name="start"
+                        type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Inicio"
+                        (change)="onFechaChange('fechaInicio', $event)"
+                      />
+                    </div>
+                    <span class="mx-4 text-gray-500">al</span>
+                    <div class="relative">
+                      <div
+                        class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+                      >
+                        <svg
+                          class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"
+                          />
+                        </svg>
+                      </div>
+                      <input
+                        id="fechaFin"
+                        formControlName="fechaFin"
+                        name="end"
+                        type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Fin"
+                      />
+                    </div>
+                  </div>
+
+                  <br />
+                  <h1
+                    class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+                  >
+                    ¿Qué días se dará el curso?
+                  </h1>
+                  <div formGroupName="dias" class="flex flex-wrap">
+                    <div class="flex items-center me-4 mb-2">
+                      <input
+                        id="lunes"
+                        formControlName="lunes"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="lunes"
+                        class="ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Lunes</label
+                      >
+                    </div>
+                    <div class="flex items-center me-4 mb-2">
+                      <input
+                        id="martes"
+                        formControlName="martes"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="martes"
+                        class="ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Martes</label
+                      >
+                    </div>
+                    <div class="flex items-center me-4 mb-2">
+                      <input
+                        id="miercoles"
+                        formControlName="miercoles"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="miercoles"
+                        class="ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Miércoles</label
+                      >
+                    </div>
+                    <div class="flex items-center me-4 mb-2">
+                      <input
+                        id="jueves"
+                        formControlName="jueves"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="jueves"
+                        class="ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Jueves</label
+                      >
+                    </div>
+                    <div class="flex items-center me-4 mb-2">
+                      <input
+                        id="viernes"
+                        formControlName="viernes"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="viernes"
+                        class="ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Viernes</label
+                      >
+                    </div>
+                    <div class="flex items-center me-4 mb-2">
+                      <input
+                        id="sabado"
+                        formControlName="sabado"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="sabado"
+                        class="ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Sábado</label
+                      >
+                    </div>
+                    <div class="flex items-center mb-2">
+                      <input
+                        id="domingo"
+                        formControlName="domingo"
+                        type="checkbox"
+                        value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="domingo"
+                        class="ms-2 text-base font-medium text-gray-900 dark:text-gray-300"
+                        >Domingo</label
+                      >
+                    </div>
+                  </div>
+
+                  <br />
+                  <h1
+                    class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+                  >
+                    ¿Cúal será la duración del curso (total de horas)?
+                  </h1>
+
+                  <div class="max-w-sm mx-auto">
+                    <input
+                      type="number"
+                      id="horasTotales"
+                      formControlName="horasTotales"
+                      aria-describedby="helper-text-explanation"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="Horas Totales"
+                      required
+                    />
+                  </div>
+
+                  <br />
+                  <h1
+                    class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-xl dark:text-white mb-3"
+                  >
+                    ¿En que horario se impartirá el curso?
+                  </h1>
+
+                  <div class="max-w-[8rem] mx-auto">
+                    <div class="flex items-start gap-x-2 mb-4">
+                      <label
+                        for="time"
+                        class="text-base font-medium text-gray-900 dark:text-white"
+                        >Comenzará a las:</label
+                      >
+                      <div class="relative w-full">
+                        <div
+                          class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none"
+                        >
+                          <svg
+                            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <input
+                          type="time"
+                          id="horaInicio"
+                          formControlName="horaInicio"
+                          class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          min="09:00"
+                          max="18:00"
+                          value="00:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="max-w-[8rem] mx-auto">
+                    <div class="flex items-start gap-x-2 mb-4">
+                      <label
+                        for="time"
+                        class="text-base font-medium text-gray-900 dark:text-white"
+                        >Terminará a las:</label
+                      >
+                      <div class="relative w-full">
+                        <div
+                          class="absolute inset-y-0 end-0 flex items-center pe-3.5 pointer-events-none"
+                        >
+                          <svg
+                            class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z"
+                              clip-rule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <input
+                          type="time"
+                          id="horaFin"
+                          formControlName="horaFin"
+                          class="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-base rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          min="09:00"
+                          max="18:00"
+                          value="00:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <br /><br />
+
+                  <button
+                    type="submit"
+                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    (click)="generarCronograma()"
+                  >
+                    Generar Cronograma
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <br />
+          <!-- Botón para abrir el modal -->
+          <div class="flex justify-center">
+            <button
+              data-modal-target="popup-modal"
+              data-modal-toggle="popup-modal"
+              class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              type="button"
+            >
+              Siguiente
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Modal -->
+          <div
+            id="popup-modal"
+            tabindex="-1"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+          >
+            <div class="relative p-4 w-full max-w-md max-h-full">
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <button
+                  type="button"
+                  class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                  data-modal-hide="popup-modal"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 14"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                    />
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+                <div class="p-4 md:p-5 text-center">
+                  <svg
+                    class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm9.008-3.018a1.502 1.502 0 0 1 2.522 1.159v.024a1.44 1.44 0 0 1-1.493 1.418 1 1 0 0 0-1.037.999V14a1 1 0 1 0 2 0v-.539a3.44 3.44 0 0 0 2.529-3.256 3.502 3.502 0 0 0-7-.255 1 1 0 0 0 2 .076c.014-.398.187-.774.48-1.044Zm.982 7.026a1 1 0 1 0 0 2H12a1 1 0 1 0 0-2h-.01Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+
+                  <h3
+                    class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    ¿Estás seguro de que toda la información es correcta?
+                  </h3>
+
+                  <!-- Botón de confirmación (color azul) -->
+                  <button
+                    data-modal-hide="popup-modal"
+                    type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  >
+                    Sí, estoy seguro
+                  </button>
+
+                  <!-- Botón de cancelación -->
+                  <button
+                    data-modal-hide="popup-modal"
+                    type="button"
+                    class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  >
+                    No, cancelar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
