@@ -7,6 +7,7 @@ import { homedir } from 'os';
 import { FindInstructorsComponent } from './pages/find-instructors/find-instructors.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { InstructorRegisterComponent } from './pages/instructor-register/instructor-register.component';
+import { StepperComponent } from './pages/stepper/stepper.component';
 
 export const routes: Routes = [
 
@@ -27,7 +28,8 @@ export const routes: Routes = [
 
     {
         path: 'course-register',
-        component: CourseRegisterComponent
+        component: StepperComponent
+        //component: CourseRegisterComponent
     },
 
     {

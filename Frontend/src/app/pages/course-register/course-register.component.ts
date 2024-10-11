@@ -4,11 +4,21 @@ import { FormGroup, FormControl, FormsModule, ReactiveFormsModule, Validators } 
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-
+import {MatButtonModule} from '@angular/material/button';
+import {provideMomentDateAdapter} from '@angular/material-moment-adapter';
+import {DateAdapter, MAT_DATE_LOCALE} from '@angular/material/core';
+import {MatDatepickerIntl, MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import 'moment/locale/es';
 @Component({
   selector: 'app-course-register',
   standalone: true,
-  imports: [StepperIndicatorComponent, ReactiveFormsModule, FormsModule, CommonModule, RouterLink],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'es-ES'},
+    provideMomentDateAdapter(),
+  ],
+  imports: [StepperIndicatorComponent, ReactiveFormsModule, FormsModule, CommonModule, RouterLink, MatFormFieldModule, MatInputModule, MatDatepickerModule, MatButtonModule],
   templateUrl: './course-register.component.html',
   styleUrl: './course-register.component.scss'
 })
@@ -45,6 +55,8 @@ export class CourseRegisterComponent {
     'Centro de Innovación e Integración de Tecnologías Avanzadas Puebla',
     'Centro de Innovación e Integración de Tecnologías Avanzadas Veracruz'
   ];
+
+  dateFormatString = "YYYY/MMM/dd";
 
   // Esta función actualiza las opciones del segundo select
   onUnidadChange(event: any) {
@@ -132,11 +144,13 @@ onFechaChange(controlName: string, event: any) {
   const fecha = event.target.value;
   this.cronograma.get(controlName)?.setValue(fecha);
   this.cronograma.get(controlName)?.updateValueAndValidity();  // Forzar detección de cambios
+  console.warn(this.cronograma.get(controlName)?.value);
 }
 
   generarCronograma() {
     const formValues = this.cronograma.value;
-    console.log(formValues);
+    var x = (this.cronograma.get("fechaInicio")?.value);
+
 
     // Ahora puedes usar estas variables en tu lógica
     const fechaInicio = formValues.fechaInicio;
